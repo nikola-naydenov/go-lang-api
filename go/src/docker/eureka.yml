@@ -1,0 +1,8 @@
+version: "3"
+services:
+  fruits:
+    image: fruits
+    ports:
+      - "1080:1080"
+    environment:
+      - "EURKEAIP=172.18.0.2"

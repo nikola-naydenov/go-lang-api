@@ -1,0 +1,75 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "fruits API documentation",
+    "version": "0.0.1",
+    "title": "fruits API",
+    "contact": {
+
+    },
+    "license": {
+
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "fruits-resource",
+      "description": "Fruits Resource"
+    }
+  ],
+  "paths": {
+    "/api/fruits": {
+      "get": {
+        "tags": [
+          "fruits-resource"
+        ],
+        "summary": "getAllFruits",
+        "operationId": "getAllFruitsUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Fruit"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "Fruit": {
+      "type": "object",
+      "properties": {
+        "calorieSources": {
+          "type": "string"
+        },
+        "caloriesPerServing": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "Fruit"
+    }
+  }
+}

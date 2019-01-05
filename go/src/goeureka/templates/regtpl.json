@@ -1,0 +1,21 @@
+{
+  "instance": {
+    "app": "fruits",
+    "instanceId": "fruits:${instanceId}",
+    "hostName": "${ipAddress}",
+    "ipAddr": "${ipAddress}",
+    "homePageUrl": "http://${ipAddress}:${port}/",
+    "statusPageUrl": "http://${ipAddress}:${port}/info",
+    "healthCheckUrl": "http://${ipAddress}:${port}/health",
+    "port": {
+      "$":1080,
+      "@enabled": true
+    },
+    "vipAddress": "fruits",
+    "dataCenterInfo": {
+      "@class":"com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+      "name": "MyOwn"
+    },
+    "status": "UP"
+  }
+}
